@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Resource ids for Anko views -->
+    <item name="recycler_main" type="id"/>
+    <item name="txt_rsvper_name" type="id"/>
+    <item name="txt_total_in_party" type="id"/>
+    <item name="swipe_refresh_rsvps" type="id"/>
+</resources>
