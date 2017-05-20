@@ -5,4 +5,5 @@
     <item name="txt_rsvper_name" type="id"/>
     <item name="txt_total_in_party" type="id"/>
     <item name="swipe_refresh_rsvps" type="id"/>
+    <item name="txt_total_attendees" type="id"/>
 </resources>

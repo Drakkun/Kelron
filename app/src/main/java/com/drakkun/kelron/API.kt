@@ -22,11 +22,11 @@ class API {
             val dialog = ctx.indeterminateProgressDialog("Fetching data...")
             doAsync {
                 Thread.sleep(2000)
-                val rsvps = arrayListOf("This content has totes changed", "this is a new item", "here's another item")
                 uiThread {
                     if(dialog.isShowing) dialog.dismiss()
                 }
                 onComplete {
+                    val rsvps = arrayListOf("This content has totes changed", "this is a new item", "here's another item")
                     ctx.toast("Finished.")
                     ctx.infoRetrieved(rsvps)
                 }
