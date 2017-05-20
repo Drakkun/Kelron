@@ -21,6 +21,7 @@ class MainActivity : AppCompatActivity(), SwipeRefreshLayout.OnRefreshListener {
 
     var someList: ArrayList<String> = arrayListOf("Dummy content 1", "Another dummy", "This one's smart tho")
     var adapter = MainActivityAdapter(someList, this)
+    lateinit var swipeRefresh: SwipeRefreshLayout
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,6 +29,7 @@ class MainActivity : AppCompatActivity(), SwipeRefreshLayout.OnRefreshListener {
         MainActivityUI().setContentView(this)
 
         initRecyclerView()
+        swipeRefresh = find<SwipeRefreshLayout>(R.id.swipe_refresh_rsvps)
     }
 
     fun initRecyclerView() {
@@ -46,6 +48,8 @@ class MainActivity : AppCompatActivity(), SwipeRefreshLayout.OnRefreshListener {
     fun infoRetrieved(rsvps: ArrayList<String>) {
         someList = rsvps
         adapter.notifyDataSetChanged()
+        swipeRefresh.isRefreshing = false
+
     }
 
     override fun onRefresh() {
