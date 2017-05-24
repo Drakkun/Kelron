@@ -17,7 +17,6 @@ import org.jetbrains.anko.recyclerview.v7.recyclerView
 import org.jetbrains.anko.relativeLayout
 import org.jetbrains.anko.support.v4.swipeRefreshLayout
 import org.jetbrains.anko.sdk25.coroutines.onClick
-import org.jetbrains.anko.support.v4.swipeRefreshLayout
 
 class MainActivity : AppCompatActivity(), SwipeRefreshLayout.OnRefreshListener {
 
